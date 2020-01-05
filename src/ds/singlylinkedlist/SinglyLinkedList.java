@@ -15,14 +15,8 @@ public class SinglyLinkedList {
     public void insertFirst(int data) {
         Node newNode = new Node();
         newNode.data = data;
-        if (isEmpty()) {
-            first = newNode;
-        }
-        else {
-            newNode.next = first;
-            first = newNode;
-        }
-
+        newNode.next = first;
+        first = newNode;
     }
 
     /**
@@ -39,7 +33,7 @@ public class SinglyLinkedList {
      */
     public void displayList() {
         Node current = first;
-        while (current.next != null) {
+        while (current != null) {
             current.displayNode();
             current = current.next;
         }
