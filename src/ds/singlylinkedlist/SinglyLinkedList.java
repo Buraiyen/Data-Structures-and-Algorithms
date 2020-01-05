@@ -8,7 +8,7 @@ public class SinglyLinkedList {
     public SinglyLinkedList(){}
 
     /**
-     * Function to inset node at the beginning of the list
+     * Function to insert node at the beginning of the list
      *
      * @param data - value inside node
      */
@@ -17,6 +17,21 @@ public class SinglyLinkedList {
         newNode.data = data;
         newNode.next = first;
         first = newNode;
+    }
+
+    /**
+     * Function to insert node at the end of the list
+     *
+     * @param data
+     */
+    public void insertLast(int data) {
+        Node newNode = new Node();
+        newNode.data = data;
+        Node current = first;
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = newNode;
     }
 
     /**
