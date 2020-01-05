@@ -4,7 +4,26 @@ public class SinglyLinkedList {
 
     private Node first; // Represents the first node in the list
 
+    // Constructor
+    public SinglyLinkedList(){}
 
+    /**
+     * Function to inset node at the beginning of the list
+     *
+     * @param data - value inside node
+     */
+    public void insertFirst(int data) {
+        Node newNode = new Node();
+        newNode.data = data;
+        if (isEmpty()) {
+            first = newNode;
+        }
+        else {
+            newNode.next = first;
+            first = newNode;
+        }
+
+    }
 
     /**
      * Function to check if the linked list is empty
