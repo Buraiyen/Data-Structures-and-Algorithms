@@ -5,8 +5,15 @@ import java.util.Scanner;
 import java.util.Random;
 
 
+
 public class LinearDriver {
+
     private static final Random RANDOM = new Random();
+
+    /**
+     * @author - Brian Nguyen
+     * @date - 1/6/20
+     */
     public static void main(String[] args) {
         int size, min, max, value, index;
         int [] arr;
@@ -46,7 +53,7 @@ public class LinearDriver {
     }
 
     /**
-     * Linear searching algorithm
+     * Linear searching algorithm. O(n)
      *
      * @param arr - the array used to search for integer
      * @param x - the value that the array is searching for
