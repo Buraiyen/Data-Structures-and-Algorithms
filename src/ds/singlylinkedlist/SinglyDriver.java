@@ -9,10 +9,23 @@ public class SinglyDriver {
         sl.insertFirst(4);
         sl.insertFirst(5);
         sl.insertLast(100);
+
+        // Expected output: 5, 4, 3, 2, 1, 100
         sl.displayList();
+
         sl.deleteFirst();
+
+        // Expected output: 4, 3, 2, 1, 100
         sl.displayList();
+
         sl.deleteLast();
+
+        // Expected output: 4, 3, 2, 1
+        sl.displayList();
+
+        sl.deleteLast();
+
+        // Expected output: 4, 3, 2
         sl.displayList();
     }
 }
