@@ -34,6 +34,12 @@ public class SinglyLinkedList {
         current.next = newNode;
     }
 
+    public Node deleteFirst() {
+        Node temp = first;
+        first = first.next; // The node after the old first is now the new first
+        return temp;
+    }
+
     /**
      * Function to check if the linked list is empty
      *
@@ -52,5 +58,6 @@ public class SinglyLinkedList {
             current.displayNode();
             current = current.next;
         }
+        System.out.println();
     }
 }
