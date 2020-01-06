@@ -7,21 +7,33 @@ import java.util.Random;
 public class LinearDriver {
     private static final Random RANDOM = new Random();
     public static void main(String[] args) {
-        int size, min, max, value;
+        int size, min, max, value, index;
+        int [] arr;
 
         Scanner in = new Scanner(System.in);
         System.out.print("Enter the size of your array: ");
         size = in.nextInt();
 
-        System.out.print("Enter the minimum value of the range greater than zero: ");
+        System.out.print("Enter the minimum value of the range (zero or greater): ");
         min = in.nextInt();
 
         System.out.print("Enter the maximum value of the range: ");
-        min = in.nextInt();
+        max = in.nextInt();
 
         System.out.print("Enter the value you would like to search for: ");
         value = in.nextInt();
 
+        arr = new int[size];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random(min, max);
+        }
+        index = search(arr, value);
+        if (index == -1) {
+            System.out.println("Value not in list");
+        }
+        else {
+            System.out.println("Value of index: " + index);
+        }
 
     }
 
