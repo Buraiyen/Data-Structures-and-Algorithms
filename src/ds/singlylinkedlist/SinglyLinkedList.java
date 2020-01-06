@@ -2,7 +2,7 @@ package ds.singlylinkedlist;
 
 public class SinglyLinkedList {
 
-    private Node first; // Represents the first node in the list
+    private Node first, secondToLast; // Represents the first node in the list
 
     // Constructor
     public SinglyLinkedList(){}
@@ -38,6 +38,16 @@ public class SinglyLinkedList {
         Node temp = first;
         first = first.next; // The node after the old first is now the new first
         return temp;
+    }
+
+    public Node deleteLast() {
+        Node current = first;
+        while (current.next != null) {
+            secondToLast = current;
+            current = current.next;
+        }
+        secondToLast.next = null;
+        return current;
     }
 
     /**

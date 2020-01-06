@@ -12,5 +12,7 @@ public class SinglyDriver {
         sl.displayList();
         sl.deleteFirst();
         sl.displayList();
+        sl.deleteLast();
+        sl.displayList();
     }
 }
