@@ -1,8 +1,11 @@
 package algo.linearsearch;
 
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class LinearDriver {
+    private static final Random RANDOM = new Random();
     public static void main(String[] args) {
         int size, min, max, value;
 
@@ -18,6 +21,8 @@ public class LinearDriver {
 
         System.out.print("Enter the value you would like to search for: ");
         value = in.nextInt();
+
+
     }
 
     /**
@@ -33,5 +38,9 @@ public class LinearDriver {
             }
         }
         return -1;
+    }
+
+    public static int random(int min, int max) {
+        return RANDOM.nextInt(max) + min;
     }
 }
