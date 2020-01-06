@@ -2,13 +2,14 @@ package ds.singlylinkedlist;
 
 public class SinglyLinkedList {
 
-    private Node first, secondToLast; // Represents the first node in the list
+    private Node first;         // Represents the first node in the list
+    private Node secondToLast;  // Represents the second-to-last node in the list. Used for deleting last node
 
     // Constructor
     public SinglyLinkedList(){}
 
     /**
-     * Function to insert node at the beginning of the list
+     * Method to insert node at the beginning of the list
      *
      * @param data - value inside node
      */
@@ -20,7 +21,7 @@ public class SinglyLinkedList {
     }
 
     /**
-     * Function to insert node at the end of the list
+     * Method to insert node at the end of the list
      *
      * @param data
      */
@@ -28,26 +29,40 @@ public class SinglyLinkedList {
         Node newNode = new Node();
         newNode.data = data;
         Node current = first;
-        while (current.next != null) {
+        while (current.next != null) { // Iterate to last element
             current = current.next;
         }
         current.next = newNode;
     }
 
-    public Node deleteFirst() {
-        Node temp = first;
-        first = first.next; // The node after the old first is now the new first
-        return temp;
+    /**
+     * Method to delete the first element in the list
+     */
+    public void deleteFirst() {
+        if (isEmpty()) {
+            System.out.println("ERROR: List is empty");
+        }
+        else {
+            first = first.next; // The node after the old first is now the new first
+        }
     }
 
-    public Node deleteLast() {
-        Node current = first;
-        while (current.next != null) {
-            secondToLast = current;
-            current = current.next;
+    /**
+     * Method to delete the last element in the list
+     */
+    public void deleteLast() {
+        if (isEmpty()) {
+            System.out.println("ERROR: List is empty");
         }
-        secondToLast.next = null;
-        return current;
+        else {
+            Node current = first;
+            while (current.next != null) {
+                secondToLast = current;
+                current = current.next;
+            }
+            secondToLast.next = null; // The last element becomes null
+        }
+
     }
 
     /**
