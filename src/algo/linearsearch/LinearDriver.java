@@ -10,6 +10,7 @@ public class LinearDriver {
     public static void main(String[] args) {
         int size, min, max, value, index;
         int [] arr;
+        long start, end, timeElapsed;
 
         Scanner in = new Scanner(System.in);
         System.out.print("Enter the size of your array: ");
@@ -26,7 +27,11 @@ public class LinearDriver {
 
         arr = new int[size];
 
+        start = System.nanoTime();
         populateArray(arr, min, max);
+        end = System.nanoTime();
+
+        timeElapsed = end - start;
 
         index = search(arr, value);
 
@@ -36,6 +41,7 @@ public class LinearDriver {
         else {
             System.out.println("Value of index: " + index);
         }
+        System.out.println("Time elapsed: " + timeElapsed + " ns");
         System.out.println(Arrays.toString(arr));
     }
 
