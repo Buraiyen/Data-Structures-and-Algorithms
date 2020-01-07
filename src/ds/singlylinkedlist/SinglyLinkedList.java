@@ -32,12 +32,13 @@ public class SinglyLinkedList {
         while (current.next != null) { // Iterate to last element
             current = current.next;
         }
-        current.next = newNode;
+        current.next = newNode; // The node after the last node is now the last node
     }
 
     /**
      * Method to delete the first element in the list
      */
+
     public void deleteFirst() {
         if (isEmpty()) {
             System.out.println("ERROR: List is empty");
