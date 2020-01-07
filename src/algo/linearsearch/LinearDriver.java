@@ -33,15 +33,13 @@ public class LinearDriver {
         value = in.nextInt();
 
         arr = new int[size];
+        populateArray(arr, min, max);
 
         start = System.nanoTime();
-        populateArray(arr, min, max);
+        index = search(arr, value);
         end = System.nanoTime();
 
         timeElapsed = end - start;
-
-        index = search(arr, value);
-
         if (index == -1) {
             System.out.println("Value not in list");
         }
@@ -53,7 +51,8 @@ public class LinearDriver {
     }
 
     /**
-     * Linear searching algorithm. O(n)
+     * Linear searching algorithm. The algorithm would iterate through an entire list to find the value that it is
+     * looking for. O(n)
      *
      * @param arr - the array used to search for integer
      * @param x - the value that the array is searching for
