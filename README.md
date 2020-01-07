@@ -11,3 +11,4 @@ Repository for showcasing my knowledge and implementation on various types of da
 ### Algorithms
 
 - Linear Search
+- Binary Search
