@@ -6,7 +6,9 @@ Repository for showcasing my knowledge and implementation on various types of da
 
 ### Data Structures
 
-- Singly Linked List
+- Linked Lists
+    - Singly
+    - Circular
 
 ### Algorithms
 
