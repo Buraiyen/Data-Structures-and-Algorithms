@@ -46,4 +46,16 @@ public class CircularLinkedList {
     public boolean isEmpty() {
         return (first == null);
     }
+
+    /**
+     * Displays all nodes in the list
+     */
+    public void displayList() {
+        Node current = first;
+        while (current != null) {
+            current.displayNode();
+            current = current.next;
+        }
+        System.out.println();
+    }
 }
