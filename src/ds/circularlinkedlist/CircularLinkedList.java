@@ -19,6 +19,18 @@ public class CircularLinkedList {
         first = newNode;
     }
 
+    public void insertLast(int data) {
+        Node newNode = new Node();
+        newNode.data = data;
+        if(isEmpty()) {
+            first = newNode;
+        }
+        else {
+            last.next = newNode;
+            last = newNode;
+        }
+    }
+
     public boolean isEmpty() {
         return (first == null);
     }
