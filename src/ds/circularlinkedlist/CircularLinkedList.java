@@ -15,7 +15,7 @@ public class CircularLinkedList {
         if (isEmpty()) {
             last = newNode;
         }
-        newNode.next = first;
+        newNode.next = first; // The former 'first' node is now second-to-first
         first = newNode;
     }
 
@@ -28,6 +28,18 @@ public class CircularLinkedList {
         else {
             last.next = newNode;
             last = newNode;
+        }
+    }
+
+    public void deleteFirst() {
+        if (isEmpty()) {
+            System.out.println("ERROR: List is empty");
+        }
+        else {
+            if (first.next == null) {
+                last = null;
+            }
+            first = first.next;
         }
     }
 
