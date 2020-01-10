@@ -16,5 +16,10 @@ public class CircularDriver {
 
         // Expected output: [1193, 100, 4, 13]
         cl.displayList();
+
+        CircularLinkedList cl2 = new CircularLinkedList();
+
+        // Should have an error
+        cl2.deleteFirst();
     }
 }
