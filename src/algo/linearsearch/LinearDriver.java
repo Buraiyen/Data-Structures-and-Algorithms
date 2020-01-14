@@ -36,7 +36,7 @@ public class LinearDriver {
         populateArray(arr, min, max);
 
         start = System.nanoTime();
-        index = search(arr, value);
+        index = linearSearch(arr, value);
         end = System.nanoTime();
 
         timeElapsed = end - start;
@@ -58,7 +58,7 @@ public class LinearDriver {
      * @param x - the value that the array is searching for
      * @return - the index where the value is found. -1 if not found
      */
-    public static int search(int arr[], int x) {
+    public static int linearSearch(int arr[], int x) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == x) {
                 return i;
