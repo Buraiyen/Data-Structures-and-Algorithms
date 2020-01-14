@@ -12,5 +12,9 @@ Repository for showcasing my knowledge and implementation on various types of da
 
 ### Algorithms
 
+#### Searching
 - Linear Search
 - Binary Search
+
+#### Sorting
+- Selection Sort
