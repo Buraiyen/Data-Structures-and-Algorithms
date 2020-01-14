@@ -67,6 +67,18 @@ public class LinearDriver {
         return -1;
     }
 
+    public static int recursiveLinearSearch(int arr[], int x, int i) {
+        if (i > arr.length) {
+            return -1;
+        }
+        else if (arr[i] == x) {
+            return i;
+        }
+        else {
+            return recursiveLinearSearch(arr, x, i + 1);
+        }
+    }
+
     /**
      * Method used to populate an array with random integers specified by the min and max constraints
      *
